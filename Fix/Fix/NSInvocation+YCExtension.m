@@ -323,7 +323,9 @@ _struct_._param_ = [_dic_[_key_] _sel_]; \
             
         case ':': // SEL
         {
-            unsupportedType = YES;
+//            unsupportedType = YES;
+            SEL sel = NSSelectorFromString(obj);
+            [self setArgument:&sel atIndex:index];
         } break;
             
         case '(': // union

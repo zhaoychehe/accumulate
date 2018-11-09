@@ -12,6 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface YCButton : UIButton
 
+- (void)testArr:(NSArray *)list;
+- (void)testDict:(NSDictionary *)dict;
+- (void)testSelect:(SEL)select;
+- (void)addBlock:(void(^)(NSString *str))block;
+
 @end
 
 NS_ASSUME_NONNULL_END

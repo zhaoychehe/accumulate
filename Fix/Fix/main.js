@@ -18,6 +18,15 @@ fixMethod('ViewController','addView',1,function(instance,invocation,arg){
           
           var view = runInstanceMethod(instance,'view');
           var v = runMethod('YCButton','new');
+          // 数组
+          var array = new Array('list','att');
+          runInstanceMethod(v,'testArr:',new Array(array));
+          // 字典
+          var dict = {"key":"111","value":"222"};
+          runInstanceMethod(v,'testDict:',new Array(dict));
+          
+          runInstanceMethod(v,'testSelect:',new Array('selectClick:'));
+          
           var color = runMethod('UIColor','greenColor');
           runInstanceMethod(v,'setBackgroundColor:',color);
           runInstanceMethod(v,'setTitle:forState:',new Array('文字', 0));
@@ -26,12 +35,14 @@ fixMethod('ViewController','addView',1,function(instance,invocation,arg){
           
           
           });
-fixMethod('ViewController','showLoading',2,function(instance,invocation,arg){
-          runMethod('MBProgressHUD','dd_showLoading');
-          var color = runMethod('UIColor','blueColor');
-          var red = runMethod('UIColor','redColor');
-          var view = runInstanceMethod(instance,'view');
-          var sw = runInstanceMethod(instance,'sw');
-          runInstanceMethod(view,'setBackgroundColor:',color);
-          runInstanceMethod(sw,'setOnTintColor:',red);
-          });
+
+
+//fixMethod('ViewController','showLoading',2,function(instance,invocation,arg){
+//          runMethod('MBProgressHUD','dd_showLoading');
+//          var color = runMethod('UIColor','blueColor');
+//          var red = runMethod('UIColor','redColor');
+//          var view = runInstanceMethod(instance,'view');
+//          var sw = runInstanceMethod(instance,'sw');
+//          runInstanceMethod(view,'setBackgroundColor:',color);
+//          runInstanceMethod(sw,'setOnTintColor:',red);
+//          });

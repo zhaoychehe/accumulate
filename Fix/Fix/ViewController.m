@@ -8,6 +8,9 @@
 
 #import "ViewController.h"
 #import "MBProgressHUD+YCExtension.h"
+#import "NSObject+YCExtension.h"
+#import "YCButton.h"
+#import "YCFix.h"
 
 @interface ViewController ()
 
@@ -30,17 +33,25 @@
 
 - (void)addView
 {
-    UIButton *v = [[UIButton alloc] init];
+    YCButton *v = [[YCButton alloc] init];
     v.backgroundColor = [UIColor redColor];
-    [v addTarget:self action:@selector(click) forControlEvents:64];
     v.frame = CGRectMake(100, 100, 100, 100);
     [self.view addSubview:v];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    self.sw.on = YES;
-    [self showLoading];
+//    void  (^animation)(void) = ^{
+//        self.sw.on = YES;
+//    };
+//    SEL sel = @selector(click);
+//    NSString
+//    [ViewController dd_performClassSelector:@selector(animate:animations:) withObjects:@[@"147", sel]];
+////    [ViewController animate:@"1234" animations:animation];
+////    [UIView dd_performClassSelector:@selector(animateWithDuration:animations:) withObjects:@[]];
+////    [ViewController performSelector:@selector(animate:animations:) withObject:@"4321" withObject:animation];
+    
+//    [self showLoading];
 }
 
 - (void)showLoading
