@@ -31,6 +31,8 @@ fixMethod('ViewController','addView',1,function(instance,invocation,arg){
           runInstanceMethod(v,'setBackgroundColor:',color);
           runInstanceMethod(v,'setTitle:forState:',new Array('文字', 0));
           runInstanceMethod(v,'setFrame:',new Array('{{100, 100}, {50, 50}}'));
+          // SEL
+          runInstanceMethod(v,'addTarget:action:forControlEvents:', new Array(instance,'showLoading',64))
           runInstanceMethod(view,'addSubview:',v);
           
           
